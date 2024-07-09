@@ -43,15 +43,15 @@ document.addEventListener('DOMContentLoaded', function() {
       CDP.report('Registration Form',
     {
 
-    "Email": "formData.email",
-    "Firstname": "formData.firstName",
-    "Lastname": "formData.lastName",
+    "Email": formData.email,
+    "Firstname": formData.firstName,
+    "Lastname": formData.lastName,
     "Address": {
         "Country": formData.country,
         "State": formData.state,
-        "City": "formData.city",
+        "City": formData.city,
         "Pincode": formData.pincode,
-        "addressid": "5",
+        "addressid": 5,
         "Address1": formData.address1
     }
     });
