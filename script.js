@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
       email: document.getElementById('email').value,
       gender: document.getElementById('gender').value,
       address1: document.getElementById('address1').value,
-      address2: document.getElementById('address2').value,
       country: document.getElementById('country').value,
       state: document.getElementById('state').value,
       city: document.getElementById('city').value,
@@ -32,27 +31,28 @@ document.addEventListener('DOMContentLoaded', function() {
   function shareFullDetails(formData) {
     // Initialize Gigya CDP SDK for full details
     gigya.cdp.init({
-      apiDomain: 'EU5',
-      bUnitId: '4_2arKfv5bsPsK9ODVBhCJeA',
-      appId: 'HLnxME1S3b0RyHdQkB8FJA'
+        apiDomain: 'EU5',
+        bUnitId: '4_2arKfv5bsPsK9ODVBhCJeA',
+        appId: 'HHZtlpZeHXG0H--CzE0sSQ'
     })
     .then(function(sdk) {
       // Store the SDK in a global variable for future use if needed
       window.CDP = sdk;
  
       // Prepare data for CDP.report function with full details
-      CDP.report('Registration', {
-        "Email": formData.email,
-        "FirstName": formData.firstName,
-        "LastName": formData.lastName,
-        "addresses": {
-          "City": formData.city,
-          "AddressLine1": formData.address1,
-          "AddressLine2": formData.address2,
-          "Country": formData.country,
-          "State": formData.state,
-          "Pincode": formData.pincode,
-          "addressId": "4"
+      DP.report('Registration Form',
+    {
+    "Email": "",
+    "Firstname": "",
+    "Lastname": "",
+    "Address": {
+        "labore_0f3": false,
+        "Country": "",
+        "State": "",
+        "City": "",
+        "Pincode": "",
+        "addressid": "5",
+        "Address1": ""
         }
       });
  
@@ -67,10 +67,10 @@ document.addEventListener('DOMContentLoaded', function() {
  
   function shareBasicDetails(formData) {
     // Initialize Gigya CDP SDK for basic details only
-    gigya.cdp.init({
-      apiDomain: 'EU5',
-      bUnitId: '4_2arKfv5bsPsK9ODVBhCJeA',
-      appId: 'HLnxME1S3b0RyHdQkB8FJA'
+  gigya.cdp.init({
+        apiDomain: 'EU5',
+        bUnitId: '4_2arKfv5bsPsK9ODVBhCJeA',
+        appId: 'HHZtlpZeHXG0H--CzE0sSQ'
     })
     .then(function(sdk) {
       // Store the SDK in a global variable for future use if needed
