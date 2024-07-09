@@ -40,19 +40,19 @@ document.addEventListener('DOMContentLoaded', function() {
       window.CDP = sdk;
  
       // Prepare data for CDP.report function with full details
-      DP.report('Registration Form',
+      CDP.report('Registration Form',
     {
-    "Email": "",
-    "Firstname": "",
-    "Lastname": "",
+    "Email": formData.email,
+    "FirstName": formData.firstName,
+    "LastName": formData.lastName,
     "Address": {
-        "labore_0f3": false,
-        "Country": "",
-        "State": "",
-        "City": "",
-        "Pincode": "",
-        "addressid": "5",
-        "Address1": ""
+        "City": formData.city,
+          "Address1": formData.address1,
+
+          "Country": formData.country,
+          "State": formData.state,
+          "Pincode": formData.pincode,
+          "addressId": "4"
         }
       });
  
