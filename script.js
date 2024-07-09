@@ -48,7 +48,6 @@ document.addEventListener('DOMContentLoaded', function() {
     "Address": {
         "City": formData.city,
           "Address1": formData.address1,
-
           "Country": formData.country,
           "State": formData.state,
           "Pincode": formData.pincode,
