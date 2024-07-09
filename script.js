@@ -42,18 +42,19 @@ document.addEventListener('DOMContentLoaded', function() {
       // Prepare data for CDP.report function with full details
       CDP.report('Registration Form',
     {
-    "Email": formData.email,
-    "FirstName": formData.firstName,
-    "LastName": formData.lastName,
+
+    "Email": "formData.email",
+    "Firstname": "formData.firstName",
+    "Lastname": "formData.lastName",
     "Address": {
-        "City": formData.city,
-          "Address1": formData.address1,
-          "Country": formData.country,
-          "State": formData.state,
-          "Pincode": formData.pincode,
-          "addressId": "4"
-        }
-      });
+        "Country": formData.country,
+        "State": formData.state,
+        "City": "formData.city",
+        "Pincode": formData.pincode,
+        "addressid": "5",
+        "Address1": formData.address1
+    }
+    });
  
       // Report data to Gigya CDP
       alert('Form submitted successfully with full details!');
