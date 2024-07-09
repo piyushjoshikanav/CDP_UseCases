@@ -4,8 +4,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh; /* Changed from height: 100vh */
   margin: 0;
+  padding: 2rem; /* Add some padding to ensure content visibility */
+  box-sizing: border-box;
 }
 
 .container {
