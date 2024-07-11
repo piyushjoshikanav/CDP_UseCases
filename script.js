@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     this.reset(); // Reset the form
     });
- 
   function shareFullDetails(formData) {
     // Initialize Gigya CDP SDK for full details
     gigya.cdp.init({
@@ -34,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
     .then(function(sdk) {
       // Store the SDK in a global variable for future use if needed
       window.CDP = sdk;
- 
+      
       // Prepare data for CDP.report function with full details
       CDP.report('Registration Form',
     {
