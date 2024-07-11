@@ -15,18 +15,14 @@ document.addEventListener('DOMContentLoaded', function() {
       city: document.getElementById('city').value,
       pincode: document.getElementById('pincode').value
     };
- 
+    shareFullDetails(fromData) 
     // Confirmation dialog box
     if (confirm('Do you want to share your full registration details? Click OK for yes, Cancel for no.')) {
       // User clicked OK - Share full details
-      shareFullDetails(formData);
-    } else {
-      // User clicked Cancel or No - Share basic details only
-      shareBasicDetails(formData);
+      shareBasicDetails(formData)
     }
- 
     this.reset(); // Reset the form
-  });
+    });
  
   function shareFullDetails(formData) {
     // Initialize Gigya CDP SDK for full details
@@ -77,10 +73,8 @@ document.addEventListener('DOMContentLoaded', function() {
       window.CDP = sdk;
  
       // Prepare data for CDP.report function with basic details only
-      CDP.report('CustomerConsent', {
+      CDP.report('Customer_Consent', {
         "Email": formData.email,
-        "FirstName": formData.firstName,
-        "LastName": formData.lastName
       });
  
       // Report data to Gigya CDP
