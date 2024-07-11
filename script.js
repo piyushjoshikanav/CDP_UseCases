@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
       city: document.getElementById('city').value,
       pincode: document.getElementById('pincode').value
     };
-    shareFullDetails(fromData) 
+    shareFullDetails(formData) 
     // Confirmation dialog box
     if (confirm('Do you want to share your full registration details? Click OK for yes, Cancel for no.')) {
       // User clicked OK - Share full details
